@@ -6,7 +6,7 @@ A single-page portfolio site (dark executive theme) built from your resume and L
 - `index.html` — the entire site (HTML/CSS/JS in one file)
 - `assets/Surendra_Agarwal_Resume.pdf` — resume, linked from the "Download Resume" buttons
 - `assets/Surendra_Agarwal_Resume.docx` — editable resume source
-- `assets/images/` — drop your headshot photo here (see below)
+- `assets/images/headshot.jpg` — drop your headshot photo here (see below)
 
 ## Adding your photo
 Open `index.html`, find the comment near `<div class="portrait" id="portrait">`
