@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surendra Agarwal — Enterprise Architecture &amp; Digital Transformation Leader</title>
+<meta name="description" content="Surendra Agarwal — Enterprise Architecture and Digital Transformation Leader with 22+ years of experience across SAP S/4HANA, AI-enabled transformation, and global enterprise programs.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230b0f17%22/><text x=%2250%22 y=%2266%22 font-size=%2250%22 fill=%22%23cda45e%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22>SA</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0e16;
+    --bg-alt:#0d1320;
+    --surface:#121a29;
+    --surface-2:#161f31;
+    --border:#232e42;
+    --text-primary:#f2f4f8;
+    --text-secondary:#aab4c6;
+    --text-muted:#748099;
+    --accent:#cda45e;
+    --accent-soft:rgba(205,164,94,0.12);
+    --accent-strong:#e3bd7c;
+    --shadow:0 20px 60px -20px rgba(0,0,0,0.6);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text-primary);
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    background:
+      radial-gradient(1100px 500px at 85% -5%, rgba(205,164,94,0.09), transparent 60%),
+      radial-gradient(900px 500px at 10% 0%, rgba(94,140,205,0.07), transparent 55%);
+    pointer-events:none;
+    z-index:0;
+  }
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;letter-spacing:0.2px;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  section{position:relative;z-index:1;}
+
+  /* NAV */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,14,22,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 32px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:0.3px;}
+  .brand-mark{
+    width:34px;height:34px;border-radius:9px;
+    background:linear-gradient(135deg,var(--accent),#8a6a34);
+    color:#141414;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  nav.links{display:flex;gap:28px;align-items:center;}
+  nav.links a{font-size:14.5px;color:var(--text-secondary);transition:color .2s;}
+  nav.links a:hover{color:var(--accent-strong);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:8px;font-size:14.5px;font-weight:600;
+    border:1px solid transparent;cursor:pointer;transition:all .2s;
+  }
+  .btn-primary{background:var(--accent);color:#171208;}
+  .btn-primary:hover{background:var(--accent-strong);transform:translateY(-1px);}
+  .btn-outline{border-color:var(--border);color:var(--text-primary);background:transparent;}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent-strong);}
+  .nav-cta{display:flex;gap:12px;align-items:center;}
+  .menu-toggle{display:none;background:none;border:none;color:var(--text-primary);font-size:22px;cursor:pointer;line-height:1;}
+  .mobile-links{
+    display:none;flex-direction:column;
+    background:var(--bg-alt);border-top:1px solid var(--border);
+  }
+  .mobile-links.open{display:flex;}
+  .mobile-links a{
+    padding:14px 32px;font-size:15px;color:var(--text-secondary);
+    border-bottom:1px solid var(--border);
+  }
+  .mobile-links a:hover{color:var(--accent-strong);}
+
+  /* HERO */
+  .hero{padding:96px 0 72px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    color:var(--accent);font-size:13px;font-weight:600;letter-spacing:1.6px;
+    text-transform:uppercase;margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);}
+  .hero h1{font-size:52px;line-height:1.12;color:var(--text-primary);margin-bottom:18px;}
+  .hero h1 span{color:var(--accent);}
+  .hero .role-line{font-size:18px;color:var(--text-secondary);margin-bottom:22px;font-weight:400;}
+  .hero p.lead{font-size:16.5px;color:var(--text-secondary);max-width:560px;margin-bottom:34px;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px;}
+  .hero-meta{display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--text-muted);}
+  .hero-meta span{display:flex;align-items:center;gap:7px;}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+
+  .portrait-wrap{position:relative;display:flex;justify-content:center;}
+  .portrait{
+    width:280px;height:280px;border-radius:50%;
+    background:linear-gradient(160deg,var(--surface-2),var(--bg-alt));
+    border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .portrait::after{
+    content:"";position:absolute;inset:-2px;border-radius:50%;
+    border:1px solid transparent;
+    background:conic-gradient(from 200deg, var(--accent), transparent 30%, transparent 70%, var(--accent)) border-box;
+    -webkit-mask:linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;
+    opacity:.7;
+  }
+  .portrait-initials{font-family:'Playfair Display',serif;font-size:76px;color:var(--accent);font-weight:600;}
+  .portrait img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+  .portrait-caption{
+    text-align:center;font-size:12.5px;color:var(--text-muted);margin-top:16px;
+  }
+
+  /* STATS */
+  .stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-alt);}
+  .stats-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    padding:40px 0;
+  }
+  .stat{text-align:center;padding:0 16px;border-right:1px solid var(--border);}
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:'Playfair Display',serif;font-size:34px;color:var(--accent-strong);font-weight:600;}
+  .stat .label{font-size:12.5px;color:var(--text-muted);margin-top:6px;letter-spacing:.3px;}
+
+  /* SECTION HEADERS */
+  .section{padding:90px 0;}
+  .section-head{max-width:640px;margin:0 auto 48px;text-align:center;}
+  .section-head .eyebrow{justify-content:center;display:inline-flex;}
+  .section-head h2{font-size:34px;color:var(--text-primary);margin-bottom:14px;}
+  .section-head p{color:var(--text-secondary);font-size:15.5px;}
+  .section-alt{background:var(--bg-alt);}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+  .about-grid p{color:var(--text-secondary);font-size:15.5px;margin-bottom:18px;}
+  .about-grid p:last-child{margin-bottom:0;}
+  .badge-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px;}
+  .badge{
+    font-size:12.5px;padding:7px 13px;border-radius:20px;
+    border:1px solid var(--border);color:var(--text-secondary);background:var(--surface);
+  }
+  .partners{margin-top:8px;}
+  .partners h4{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);font-weight:600;margin-bottom:14px;font-family:'Inter',sans-serif;}
+
+  /* EXPERIENCE TIMELINE */
+  .timeline{position:relative;max-width:840px;margin:0 auto;}
+  .timeline::before{
+    content:"";position:absolute;left:20px;top:6px;bottom:6px;width:1px;
+    background:linear-gradient(var(--border),var(--border));
+  }
+  .tl-item{position:relative;padding:0 0 44px 62px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-dot{
+    position:absolute;left:12px;top:4px;width:17px;height:17px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--accent);
+    box-shadow:0 0 0 5px var(--bg);
+  }
+  .tl-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:26px 28px;
+  }
+  .tl-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:4px;}
+  .tl-company{font-size:17px;font-weight:600;color:var(--text-primary);font-family:'Playfair Display',serif;}
+  .tl-dates{font-size:12.5px;color:var(--accent);font-weight:600;letter-spacing:.3px;white-space:nowrap;}
+  .tl-role{font-size:14.5px;color:var(--text-secondary);font-style:italic;margin-bottom:14px;}
+  .tl-role .loc{color:var(--text-muted);font-style:normal;}
+  .tl-list{list-style:none;}
+  .tl-list li{
+    position:relative;padding-left:18px;margin-bottom:10px;
+    font-size:14.5px;color:var(--text-secondary);
+  }
+  .tl-list li:last-child{margin-bottom:0;}
+  .tl-list li::before{
+    content:"";position:absolute;left:0;top:8px;width:6px;height:6px;
+    background:var(--accent);border-radius:1px;transform:rotate(45deg);
+  }
+
+  /* SKILLS */
+  .skills-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;}
+  .skill-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;
+  }
+  .skill-card h3{font-size:17px;color:var(--text-primary);margin-bottom:18px;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.2px;}
+  .skill-card h3 .ico{color:var(--accent);margin-right:8px;}
+  .pill-group{display:flex;flex-wrap:wrap;gap:8px;}
+  .pill{
+    font-size:12.5px;padding:6px 12px;border-radius:8px;
+    background:var(--accent-soft);color:var(--accent-strong);border:1px solid rgba(205,164,94,0.25);
+  }
+  .cert-list{list-style:none;}
+  .cert-list li{
+    padding:10px 0;border-bottom:1px solid var(--border);
+    font-size:14px;color:var(--text-secondary);display:flex;align-items:flex-start;gap:10px;
+  }
+  .cert-list li:last-child{border-bottom:none;}
+  .cert-list li::before{content:"✓";color:var(--accent);font-weight:700;flex-shrink:0;}
+
+  /* EDUCATION + AWARDS */
+  .edu-awards-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;}
+  .edu-item{padding:20px 0;border-bottom:1px solid var(--border);}
+  .edu-item:last-child{border-bottom:none;padding-bottom:0;}
+  .edu-item:first-child{padding-top:0;}
+  .edu-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+  .edu-school{font-weight:600;color:var(--text-primary);font-size:15.5px;}
+  .edu-dates{font-size:12px;color:var(--accent);font-weight:600;}
+  .edu-degree{font-size:14px;color:var(--text-secondary);margin-top:4px;}
+  .award-box{
+    background:linear-gradient(150deg,var(--surface),var(--surface-2));
+    border:1px solid var(--border);border-radius:12px;padding:30px;height:100%;
+    display:flex;flex-direction:column;gap:16px;
+  }
+  .award-box .ico{font-size:26px;color:var(--accent);}
+  .award-box p{font-size:14.5px;color:var(--text-secondary);}
+  .award-tags{display:flex;flex-wrap:wrap;gap:8px;}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .contact-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px;
+  }
+  .contact-row{
+    display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);
+  }
+  .contact-row:last-child{border-bottom:none;}
+  .contact-ico{
+    width:38px;height:38px;border-radius:9px;background:var(--accent-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;
+  }
+  .contact-label{font-size:11.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);}
+  .contact-value{font-size:14.5px;color:var(--text-primary);font-weight:500;}
+  .contact-value a:hover{color:var(--accent-strong);}
+  .contact-cta h3{font-size:28px;margin-bottom:16px;color:var(--text-primary);}
+  .contact-cta p{color:var(--text-secondary);font-size:15.5px;margin-bottom:28px;}
+  .contact-actions{display:flex;gap:14px;flex-wrap:wrap;}
+
+  footer{border-top:1px solid var(--border);padding:36px 0;}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+  .footer-inner p{font-size:13px;color:var(--text-muted);}
+  .footer-links{display:flex;gap:20px;}
+  .footer-links a{font-size:13px;color:var(--text-muted);}
+  .footer-links a:hover{color:var(--accent);}
+
+  /* Reveal animations only apply once JS confirms it can run them (html.js below);
+     without JS, content stays fully visible. */
+  html.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+  html.js .reveal.in{opacity:1;transform:translateY(0);}
+
+  @media (max-width:920px){
+    .hero-grid{grid-template-columns:1fr;}
+    .portrait-wrap{order:-1;}
+    .portrait{width:180px;height:180px;}
+    .portrait-initials{font-size:52px;}
+    .about-grid{grid-template-columns:1fr;}
+    .skills-grid{grid-template-columns:1fr;}
+    .edu-awards-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);row-gap:24px;}
+    .stat{border-right:none;}
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+    .hero h1{font-size:38px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">SA</span>
+      Surendra Agarwal
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="assets/Surendra_Agarwal_Resume.pdf" download>Resume</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-links" id="mobileLinks">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Enterprise Architecture &amp; Digital Transformation</div>
+        <h1>Surendra Agarwal</h1>
+        <div class="role-line">SAP Enterprise Solution Architect · AI-Led Transformation Leader · Practice Lead</div>
+        <p class="lead">
+          22+ years building and scaling technology-enabled operating models for global manufacturing,
+          healthcare, and distribution enterprises — currently architecting a greenfield S/4HANA
+          transformation for a leading global Oil &amp; Gas organization.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="assets/Surendra_Agarwal_Resume.pdf" download>Download Resume</a>
+          <a class="btn btn-outline" href="#contact">Get in Touch</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/surendraagarwal" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+        <div class="hero-meta">
+          <span><i class="dot"></i>Bengaluru, Karnataka, India</span>
+          <span><i class="dot"></i>+91-7405238557</span>
+          <span><i class="dot"></i>surendra_mba@yahoo.com</span>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <div>
+          <div class="portrait" id="portrait">
+            <img src="assets/images/headshot.jpg" alt="Surendra Agarwal">
+          </div>
+          <div class="portrait-caption">Enterprise Solution Architect</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="wrap stats-grid">
+      <div class="stat reveal"><div class="num">22+</div><div class="label">Years of Experience</div></div>
+      <div class="stat reveal"><div class="num">$200M+</div><div class="label">Opportunity Value Unlocked</div></div>
+      <div class="stat reveal"><div class="num">90+</div><div class="label">Global Sites Deployed</div></div>
+      <div class="stat reveal"><div class="num">8</div><div class="label">Global Enterprises Served</div></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">About</div>
+        <h2>Turning ambiguity into scalable transformation</h2>
+        <p>Enterprise Architecture and Digital Transformation leadership across SAP S/4HANA, AI-enabled process design, and global operating models.</p>
+      </div>
+      <div class="about-grid reveal">
+        <div>
+          <p>
+            Enterprise Architecture and Digital Transformation leader with 22+ years building and scaling
+            technology-enabled operating models across global manufacturing, healthcare, and distribution
+            enterprises. Currently architecting a greenfield transformation for a leading global Oil &amp; Gas
+            organization, turning a fragmented, non-standardized technology landscape into a single, scalable
+            enterprise platform — the latest in a run of complex, ambiguous transformation programs built
+            from the ground up.
+          </p>
+          <p>
+            Track record of turning complex, high-stakes problems into scalable outcomes: architected an
+            AI-enabled revenue-recognition transformation that unlocked roughly $200M in opportunity value
+            and shortened the recognition cycle by 10–15 days per customer shipment, and rolled out a
+            CAPA-driven shelf-life compliance solution across 90+ manufacturing and distribution sites that
+            closed off expired-device shipment risk for a ~$12B global medical technology business.
+          </p>
+        </div>
+        <div>
+          <p>
+            Recognized by senior stakeholders and CXOs for owning ambiguous, high-stakes problems, building
+            alignment across global teams, and mentoring the next generation of technical talent through
+            structured knowledge-sharing programs. Looking to lead enterprise-scale transformation programs
+            that close the gap between "system-live" and "value realized" — through business redesign, a
+            clean-core approach, and paying down the technical debt that stands in the way of future AI and
+            automation upgrades.
+          </p>
+          <div class="partners">
+            <h4>Partnered With</h4>
+            <div class="badge-row">
+              <span class="badge">Aramco</span>
+              <span class="badge">Philips</span>
+              <span class="badge">Microsoft</span>
+              <span class="badge">GE Healthcare</span>
+              <span class="badge">Cardinal Health</span>
+              <span class="badge">Infosys</span>
+              <span class="badge">Wipro</span>
+              <span class="badge">HCL Technologies</span>
+              <span class="badge">TCS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Experience</div>
+        <h2>Career Timeline</h2>
+        <p>Enterprise-scale SAP and transformation leadership across six global organizations.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div class="tl-company">SAP | Client: Aramco</div>
+              <div class="tl-dates">Aug 2026 – Present</div>
+            </div>
+            <div class="tl-role">Enterprise Solution Architect &nbsp;|&nbsp; <span class="loc">Bengaluru, India</span></div>
+            <ul class="tl-list">
+              <li>Brought in to architect a greenfield S/4HANA Private Cloud transformation for Aramco on the strength of prior cross-industry greenfield delivery, turning a fragmented, non-standardized landscape into a single, scalable enterprise platform architecture.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div class="tl-company">Philips</div>
+              <div class="tl-dates">Oct 2021 – Jun 2026</div>
+            </div>
+            <div class="tl-role">SAP SCM Solution Architect &amp; Capability Lead &nbsp;|&nbsp; <span class="loc">Bengaluru, India</span></div>
+            <ul class="tl-list">
+              <li>Volunteered to own an unproven, AI-enabled approach to revenue recognition for medical equipment control transfer, then architected and delivered it in under 6 months — expected to unlock ~$200M in opportunity value and cut the recognition cycle by roughly 10 days.</li>
+              <li>Built a CAPA-driven shelf-life management solution and deployed it across 90+ manufacturing and distribution sites worldwide, closing off the risk of shipping expired devices for a ~$12B global medical technology business and strengthening regulatory compliance, patient safety, and customer trust.</li>
+              <li>Designed the enterprise SaaS integration strategy linking SAP and Salesforce through scalable APIs, replacing a patchwork of point-to-point interfaces with one reusable framework now used as the standard for future programs — while also building a structured cross-module mentoring program that grew SCM bench strength and technical readiness.</li>
+              <li>Grew SCM capability across a team of 90+ Philips consultants — driving cross-module integration, building out training programs, mentoring emerging talent, and running knowledge-sharing sessions that lifted operational efficiency and positioned the team for future growth.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div class="tl-company">Wipro | Client: Philips</div>
+              <div class="tl-dates">Jan 2020 – Oct 2021</div>
+            </div>
+            <div class="tl-role">SAP Senior Functional Consultant &nbsp;|&nbsp; <span class="loc">Pune, India</span></div>
+            <ul class="tl-list">
+              <li>Led the global Regional Distribution Centre template design for Philips, drawing on prior template-delivery experience to standardize operations across the distribution network — the template went on to become the regional standard.</li>
+              <li>Closed a critical operational gap by building the shipment and transportation integration between SAP and the third-party INFODIS platform, lifting workflow efficiency and processing speed across the network.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div class="tl-company">Infosys | Client: GE, Sulzer</div>
+              <div class="tl-dates">Nov 2016 – Jan 2020</div>
+            </div>
+            <div class="tl-role">SAP S/4HANA Consultant &amp; Central Business Analyst &nbsp;|&nbsp; <span class="loc">Pune, India</span></div>
+            <ul class="tl-list">
+              <li>Led the greenfield S/4HANA implementation for Sulzer, drawing on strong functional and technical expertise plus deep business-process knowledge. Developed the Order-to-Cash template in S/4HANA that Infosys later adopted as its discrete-manufacturing reference model in pre-sales pitches for new business.</li>
+              <li>Brought in by GE as Central Business Analyst to lead a set of complex initiatives — Italy e-Invoicing, an internal entrepreneur billing system with 3-way match for internal procurement, and DUNS-based customer e-KYC — closing compliance and data-quality gaps by cleaning up 90K unregistered, duplicate, and non-functional customer records.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div class="tl-company">HCL | Client: Microsoft</div>
+              <div class="tl-dates">Aug 2015 – Nov 2016</div>
+            </div>
+            <div class="tl-role">SAP Senior Functional Consultant &nbsp;|&nbsp; <span class="loc">Noida, India</span></div>
+            <ul class="tl-list">
+              <li>Delivered the SAP Revenue Accounting &amp; Reporting (RAR) integration for Microsoft, keeping US IFRS revenue reporting compliant for a Fortune 500 technology client.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div class="tl-company">TCS | Client: Cardinal Health, Voltas, Nelco, Oxford Stationary</div>
+              <div class="tl-dates">Mar 2011 – Aug 2015</div>
+            </div>
+            <div class="tl-role">SAP Project Manager &amp; Lead Functional Consultant &nbsp;|&nbsp; <span class="loc">Gandhinagar, India</span></div>
+            <ul class="tl-list">
+              <li>Directed the automation of customer invoicing (IKON) at a throughput of 10,000 invoices a week, turning a manual process that took 3 days and 10 people into an automated workflow running in under 4 hours — later held up as a model for machine-based process redesign.</li>
+              <li>Managed enterprise SAP programs for Cardinal Health, Voltas, Nelco, and Oxford Stationary (Retail), delivering each engagement on schedule and within budget.</li>
+              <li>Caught and owned a ~₹5 Cr financial posting error, going directly to CFO-level leadership to get it corrected — the transparency became a trust-building reference point with the client.</li>
+              <li>Took on the archival and SAP–Salesforce Order-to-Cash integration for a leading US healthcare logistics client with no in-house precedent to draw on — built the capability from scratch and deployed it in under 4 months, with measurable savings in database and system performance.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Capabilities</div>
+        <h2>Skills &amp; Certifications</h2>
+        <p>Core competencies, certifications, and the platforms used to deliver enterprise-scale transformation.</p>
+      </div>
+      <div class="skills-grid reveal">
+
+        <div class="skill-card">
+          <h3><span class="ico">◆</span>Core Competencies</h3>
+          <div class="pill-group">
+            <span class="pill">Enterprise Architecture &amp; Technology Strategy</span>
+            <span class="pill">AI-Enabled Digital Transformation</span>
+            <span class="pill">Global Template Design &amp; Rollouts</span>
+            <span class="pill">Business Process Reengineering</span>
+            <span class="pill">Executive Stakeholder Management</span>
+            <span class="pill">SaaS &amp; Subscription Business Models</span>
+            <span class="pill">Talent Development &amp; CoE Building</span>
+            <span class="pill">Cross-Industry Transformation</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3><span class="ico">◆</span>Certifications</h3>
+          <ul class="cert-list">
+            <li>SAP Enterprise Architect</li>
+            <li>SAP BRIM</li>
+            <li>SAP S/4HANA Sales</li>
+            <li>SAP Signavio</li>
+            <li>PRINCE2® Foundation — Project Management</li>
+            <li>GenAI Ninja White Belt</li>
+            <li>SAP BTP Solution Architect (Course)</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3><span class="ico">◆</span>Platforms &amp; Tools</h3>
+          <div class="pill-group">
+            <span class="pill">SAP LeanIX</span>
+            <span class="pill">SAP Cloud ALM</span>
+            <span class="pill">SAP Signavio</span>
+            <span class="pill">Appian</span>
+            <span class="pill">Zuora</span>
+            <span class="pill">Joule (SAP AI)</span>
+            <span class="pill">Salesforce</span>
+            <span class="pill">MuleSoft</span>
+            <span class="pill">OpenText</span>
+            <span class="pill">Apigee</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & AWARDS -->
+  <section class="section section-alt" id="education">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Background</div>
+        <h2>Education &amp; Recognition</h2>
+      </div>
+      <div class="edu-awards-grid reveal">
+
+        <div class="skill-card">
+          <h3><span class="ico">◆</span>Education</h3>
+
+          <div class="edu-item">
+            <div class="edu-top">
+              <div class="edu-school">XLRI, Jamshedpur</div>
+              <div class="edu-dates">Jun 2026 – May 2027</div>
+            </div>
+            <div class="edu-degree">Global Senior Management Program — Organizational Leadership</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-top">
+              <div class="edu-school">Om Kothari Institute of Management &amp; Research, Kota</div>
+              <div class="edu-dates">2002 – 2004</div>
+            </div>
+            <div class="edu-degree">MBA — Marketing &amp; HR</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-top">
+              <div class="edu-school">Government College, Kota</div>
+              <div class="edu-dates">1999 – 2002</div>
+            </div>
+            <div class="edu-degree">B.Sc. — Computer Application</div>
+          </div>
+
+        </div>
+
+        <div class="award-box">
+          <div class="ico">★</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:19px;">Awards &amp; Recognition</h3>
+          <p>
+            Received multiple impact awards across projects delivered for the Philips Healthcare System,
+            recognizing fast turnaround, strong customer and team engagement, and consistently
+            high-quality, value-based delivery.
+          </p>
+          <div class="award-tags">
+            <span class="badge">Ownership to Deliver Fast</span>
+            <span class="badge">Customer First</span>
+            <span class="badge">Team Player</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal contact-cta">
+        <div class="eyebrow">Contact</div>
+        <h3>Let's talk transformation.</h3>
+        <p>
+          Open to Practice Lead, Transformation Leader, and Enterprise Architecture Leader roles —
+          or simply a conversation about enterprise architecture, S/4HANA, and AI-led transformation.
+        </p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:surendra_mba@yahoo.com">Email Me</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/surendraagarwal" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+          <a class="btn btn-outline" href="assets/Surendra_Agarwal_Resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="contact-row">
+          <div class="contact-ico">@</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:surendra_mba@yahoo.com">surendra_mba@yahoo.com</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-ico">☎</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+91-7405238557</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-ico">in</div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value"><a href="https://www.linkedin.com/in/surendraagarwal" target="_blank" rel="noopener">linkedin.com/in/surendraagarwal</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-ico">◎</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Bengaluru, Karnataka, India</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-ico">A</div>
+          <div>
+            <div class="contact-label">Languages</div>
+            <div class="contact-value">English (Professional), Hindi (Native)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> Surendra Agarwal. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:surendra_mba@yahoo.com">Email</a>
+      <a href="https://www.linkedin.com/in/surendraagarwal" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="assets/Surendra_Agarwal_Resume.pdf" download>Resume</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Only enable the scroll-reveal effect if IntersectionObserver is supported;
+  // otherwise leave content fully visible (no html.js class = no opacity:0 in CSS).
+  if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
+  }
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileLinks = document.getElementById('mobileLinks');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+  });
+  mobileLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    });
+  });
+</script>
+
+</body>
+</html>
